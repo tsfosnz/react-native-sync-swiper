@@ -1,0 +1,55 @@
+{
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "leecade",
+      "email": "leecade@163.com"
+    },
+    {
+      "name": "rajkissu",
+      "email": "rajkissu@gmail.com"
+    },
+    {
+      "name": "tasiyo7333",
+      "email": "taisyo9170@yahoo.co.jp"
+    }
+  ],
+  "name": "module-swiper",
+  "optionalDependencies": {},
+  "pre-commit": {
+    "run": [
+      "precommit"
+    ],
+    "silent": true
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leecade/react-native-swiper.git"
+  },
+  "scripts": {
+    "lint": "standard | snazzy",
+    "precommit": "git diff --name-only --cached --relative | grep '\\.jsx\\?$' | xargs standard | snazzy; if [ $? -ne 0 ]; then exit 1; fi",
+    "start": "react-native start",
+    "test": "npm run lint",
+    "update": "updtr"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "global": [
+      "__DEV__",
+      "FormData",
+      "requestAnimationFrame",
+      "alert",
+      "setImmediate",
+      "fetch"
+    ],
+    "ignore": [
+      "dist/",
+      "mock/",
+      "node_modules/"
+    ]
+  },
+  "version": "1.5.4"
+}
