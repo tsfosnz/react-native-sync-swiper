@@ -6,5 +6,10 @@ The code is based on [leecade/react-native-swiper](https://github.com/leecade/re
 
 The main difference is that, when there is multiple swiper inside an swiper, it will be able to track the index of each swiper and sync the position of them.
 
+There are two new APIs added to the original react-native-swiper code:
+
+- props: ```onScrollBy(value)```, the props callback will return the index of current swiper
+- method: ```scrollTo(index, animated = false)```, will scroll the swiper to the given index 
+
 
 
