@@ -11,5 +11,7 @@ There are two new APIs added to the original react-native-swiper code:
 - props: ```onScrollBy(value)```, the props callback will return the index of current swiper
 - method: ```scrollTo(index, animated = false)```, will scroll the swiper to the given index 
 
+Fill free to try it, highly recommend to use react-native-swiper and modify it yourself, but not this one.
+
 ![Demo](https://github.com/hellomaya/react-native-sync-swiper/blob/master/example.gif)
 
