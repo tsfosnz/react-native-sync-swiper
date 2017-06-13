@@ -386,14 +386,9 @@ export default class extends Component {
     }
   }
 
-  scrollTo = (index, animated = false) => {
+  scrollTo = (index) => {
 
-    //let span = this.state.index - index;
-
-    console.log("scrollTo ===> ")
-    console.log(index);
-    //console.log(index + this.state.index);
-
+    let animated = false;
 
 
     if (this.internals.isScrolling || this.state.total < 2) return

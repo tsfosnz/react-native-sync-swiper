@@ -45,31 +45,17 @@ class SwiperApp extends Component {
 
         if (type === 'A') {
 
-            this.refs['swiperB'].scrollTo(parseInt(value));
-            this.refs['swiperC'].scrollTo(parseInt(value));
-        }
-
-
-        if (type === 'B') {
-
-            this.refs['swiperA'].scrollTo(parseInt(value));
-            this.refs['swiperC'].scrollTo(parseInt(value));
-        }
-
-
-        if (type === 'C') {
-
-            this.refs['swiperA'].scrollTo(parseInt(value));
-            this.refs['swiperC'].scrollTo(parseInt(value));
+            this.refs['swiperB'] & this.refs['swiperB'].scrollTo(parseInt(value));
+            this.refs['swiperC'] & this.refs['swiperC'].scrollTo(parseInt(value));
         }
 
     }
 
     render() {
         return (
-            <Swiper style={styles.wrapper} showsButtons={false} horizontal={false} loop={false} onScrollBy={this.onScrollBy.bind(this, 'top')}>
+            <Swiper style={styles.wrapper} showsButtons={false} horizontal={false} onScrollBy={this.onScrollBy.bind(this, 'top')}>
                 <View style={styles.slide1}>
-                    <Swiper ref='swiperA' style={styles.wrapper} showsButtons={false} horizontal={true}
+                    <Swiper style={styles.wrapper} showsButtons={false} horizontal={true}
                             onScrollBy={this.onScrollBy.bind(this, 'A')}>
                         <View style={styles.slide1}>
                             <Text style={styles.text}>A0</Text>
@@ -83,8 +69,7 @@ class SwiperApp extends Component {
                     </Swiper>
                 </View>
                 <View style={styles.slide2}>
-                    <Swiper ref='swiperB' style={styles.wrapper} showsButtons={false} horizontal={true}
-                            onScrollBy={this.onScrollBy.bind(this, 'B')}>
+                    <Swiper ref='swiperB' style={styles.wrapper} showsButtons={false} horizontal={true}>
                         <View style={styles.slide1}>
                             <Text style={styles.text}>B0</Text>
                         </View>
@@ -97,8 +82,7 @@ class SwiperApp extends Component {
                     </Swiper>
                 </View>
                 <View style={styles.slide3}>
-                    <Swiper ref='swiperC' style={styles.wrapper} showsButtons={false} horizontal={true}
-                            onScrollBy={this.onScrollBy.bind(this, 'C')}>
+                    <Swiper ref='swiperC' style={styles.wrapper} showsButtons={false} horizontal={true}>
                         <View style={styles.slide1}>
                             <Text style={styles.text}>C0</Text>
                         </View>
