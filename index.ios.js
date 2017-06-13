@@ -60,7 +60,7 @@ class SwiperApp extends Component {
         if (type === 'C') {
 
             this.refs['swiperA'].scrollTo(parseInt(value));
-            this.refs['swiperC'].scrollTo(parseInt(value));
+            this.refs['swiperB'].scrollTo(parseInt(value));
         }
 
     }

@@ -164,6 +164,7 @@ export default class extends Component {
    */
   autoplayTimer = null
   loopJumpTimer = null
+  preventOnScrollBy = false;
 
   componentWillReceiveProps(nextProps) {
     const sizeChanged = (nextProps.width || width) !== this.state.width ||
@@ -360,7 +361,11 @@ export default class extends Component {
 
 
     //@tom
-    this.props.onScrollBy && this.props.onScrollBy(index);
+    if (!this.preventOnScrollBy) {
+      this.props.onScrollBy && this.props.onScrollBy(index);
+    }
+
+    this.preventOnScrollBy = false;
 
     this.internals.offset = offset
 
@@ -410,6 +415,8 @@ export default class extends Component {
     this.setState({
       autoplayEnd: false
     })
+
+    this.preventOnScrollBy = true;
 
     // trigger onScrollEnd manually in android
     if (!animated || Platform.OS === 'android') {
