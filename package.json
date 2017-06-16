@@ -9,6 +9,7 @@
   "dependencies": {
     "test-swiper": "file: ./app/module-swiper",
     "react": "16.0.0-alpha.6",
+    "prop-types": "^15.5.10",
     "react-native": "0.44.2"
   },
   "devDependencies": {
